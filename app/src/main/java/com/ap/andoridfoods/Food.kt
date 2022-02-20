@@ -1,22 +1,17 @@
 package com.ap.andoridfoods
 
-class Food constructor(name: String, numberLikes: Int)  {
-    var name: String = name
-    var numberLikes: Int = numberLikes
+class Food (var name: String, var numberLikes: Int) {
 
-    fun contador(): Int {
-        var number = this.numberLikes + 1
-        return number
-    }
 }
 
-fun main() {
-    val food = Food("Pollo", 10)
-    val food1 = Food("Pollo", 30)
-    val food2 = Food("Pollo", 25)
-    val food3 = Food("Pollo", 25)
 
-    val foodsLikes = arrayOf(food.numberLikes, food1.numberLikes, food2.numberLikes, food3.numberLikes)
+/* fun main() {
+
+    val food = Food("Edgar", 30)
+
+    println(food.numberLikes)
+
+    val foodsLikes = arrayOf(food.numberLikes)
 
     foodsLikes.forEach { print("$it ") }
 
@@ -29,13 +24,27 @@ fun main() {
             }
         }
     }
-
-    println()
-    foodsLikes.forEach { print("$it ") }
-
-    println()
-    print(food1.contador())
-    println()
-
-    foodsLikes.forEach { print("$it ") }
 }
+
+
+
+
+/* @JvmName("getName1")
+fun getName(): String{
+    return name;
+}
+
+@JvmName("setName1")
+fun setName(name: String){
+    this.name = name
+}
+
+@JvmName("getName")
+fun getName(numberLikes: Int){
+    this.numberLikes = numberLikes
+}
+
+@JvmName("setNumberOfLikes")
+fun setNumberOfLikes(numberLikes: Int) {
+    this.numberLikes = numberLikes
+} */
