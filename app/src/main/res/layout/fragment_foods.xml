@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#272727"
     tools:context=".FoodsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -11,22 +12,21 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:id="@+id/toolbar"
-                app:layout_collapseMode="pin"
-                app:title="@string/app_name"
-                />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:title="Foods" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
 
         <ListView
@@ -34,6 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -4,22 +4,53 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+    android:background="@color/secondaryDarkColor"
     >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="1024px"
+        android:src="@drawable/img1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
 
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/name"
     android:text="Name"
-    android:textSize="16sp"
+    android:textSize="20sp"
+    android:textColor="@color/white"
     />
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/number_likes"
-        android:text="Likes"
-        android:textSize="16sp"
-        />
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart"
+            android:background="@color/secondaryDarkColor"
+            android:id="@+id/butt_likes"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_likes"
+            android:text="Likes"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>
