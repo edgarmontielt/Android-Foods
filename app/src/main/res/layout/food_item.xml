@@ -8,9 +8,10 @@
     >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="1024px"
-        android:src="@drawable/img1" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_food"
+        />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -41,6 +42,10 @@
             android:background="@color/secondaryDarkColor"
             android:id="@+id/butt_likes"
             />
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="match_parent" />
 
         <TextView
             android:layout_width="match_parent"

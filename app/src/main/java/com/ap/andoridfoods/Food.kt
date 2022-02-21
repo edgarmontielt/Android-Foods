@@ -1,11 +1,10 @@
 package com.ap.andoridfoods
 
-class Food (var name: String, var numberLikes: Int) {
+data class Food (var name: String, var numberLikes: Int, var imgUrl: String) {
 
 }
 
 fun bubbleSort(list:ArrayList<Food>){
-
     for (i in 0 until (list.size - 1 )) {
         for (j in 0 until (list.size - i - 1)) {
             if (list[j].numberLikes < list[j + 1].numberLikes) {
