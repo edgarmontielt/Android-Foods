@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class firstFragment : Fragment() {
 
@@ -21,8 +22,8 @@ class firstFragment : Fragment() {
 
 
         val food1 =  Food("Pastel de chocolate", 20, "https://cdn.buenavibra.es/wp-content/uploads/2020/01/16191515/Webp.net-resizeimage-68-1170x600.jpg")
-        val food2 =  Food("Tarta de manzana", 30, "https://www.splenda.com/wp-content/uploads/2020/08/perfect-homemade-apple-pie-1-1536x768.jpg")
-        val food3 = Food("Pay de limón", 9, "https://cocinamia.com.mx/wp-content/uploads/2020/02/a-02-1100x500.png")
+        val food2 =  Food("Tarta de manzana", 25, "https://www.splenda.com/wp-content/uploads/2020/08/perfect-homemade-apple-pie-1-1536x768.jpg")
+        val food3 = Food("Pay de limón", 22, "https://cocinamia.com.mx/wp-content/uploads/2020/02/a-02-1100x500.png")
 
 
         val foodsLikes = arrayListOf<Food>(food1, food2, food3)
@@ -34,6 +35,17 @@ class firstFragment : Fragment() {
         val listView = view.findViewById<ListView>(R.id.listView)
         val adapter = MyAdapter(thisActivity, foodsLikes)
         listView.adapter = adapter
+
+        val refresh = view.findViewById<SwipeRefreshLayout>(R.id.refresh)
+
+        refresh.setOnRefreshListener {
+            val thisActivity =  activity as AppCompatActivity
+            val listView = view.findViewById<ListView>(R.id.listView)
+            val adapter = MyAdapter(thisActivity, foodsLikes)
+            bubbleSort(foodsLikes)
+            listView.adapter = adapter
+            refresh.isRefreshing = false
+        }
 
         return view
     }

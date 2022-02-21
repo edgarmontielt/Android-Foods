@@ -4,9 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.bumptech.glide.Glide
 
 class MyAdapter (private val context: Context, private val arrayList: ArrayList<Food>): BaseAdapter() {
@@ -14,6 +12,7 @@ class MyAdapter (private val context: Context, private val arrayList: ArrayList<
     private lateinit var name: TextView
     private lateinit var numberLikes: TextView
     private lateinit var imageFood: ImageView
+    private lateinit var button: ImageButton
 
     override fun getCount(): Int {
         return arrayList.size
@@ -35,6 +34,7 @@ class MyAdapter (private val context: Context, private val arrayList: ArrayList<
         name = convertView.findViewById(R.id.name)
         numberLikes = convertView.findViewById(R.id.number_likes)
         imageFood = convertView.findViewById(R.id.image_food)
+        button = convertView.findViewById(R.id.butt_likes)
 
         Glide
             .with(context)
@@ -43,6 +43,13 @@ class MyAdapter (private val context: Context, private val arrayList: ArrayList<
 
         name.text = arrayList[position].name
         numberLikes.text = arrayList[position].numberLikes.toString()
+
+        button.setOnClickListener {
+            val newNumberLikes = arrayList[position].numberLikes ++
+            numberLikes.text = newNumberLikes.toString()
+            println(newNumberLikes)
+            bubbleSort(arrayList)
+        }
 
         return convertView
     }
