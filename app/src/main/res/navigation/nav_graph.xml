@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/foodsFragment">
+    app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.ap.andoridfoods.firstFragment"
@@ -14,4 +14,25 @@
         android:name="com.ap.andoridfoods.FoodsFragment"
         android:label="Foods"
         tools:layout="@layout/fragment_foods" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ap.andoridfoods.WelcomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ap.andoridfoods.HomeFragment"
+        android:label="Menú"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_foodsFragment"
+            app:destination="@id/foodsFragment" />
+    </fragment>
 </navigation>

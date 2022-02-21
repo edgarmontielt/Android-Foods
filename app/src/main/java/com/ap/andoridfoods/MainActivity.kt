@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         val appBarConfiguration = AppBarConfiguration(
-            topLevelDestinationIds = setOf(R.id.foodsFragment, R.id.firstFragment),drawer
+            topLevelDestinationIds = setOf( R.id.welcomeFragment, R.id.homeFragment),drawer
         )
 
         toolbar.setupWithNavController(navController, appBarConfiguration)
