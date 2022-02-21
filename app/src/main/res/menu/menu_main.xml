@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/desayunosFragment"
+            android:title="Entradas"
+            android:icon="@android:drawable/ic_menu_help"
+            />
+        <item
+            android:id="@+id/comidasFragment"
+            android:title="Comidas"
+            android:icon="@android:drawable/ic_menu_gallery"
+            />
+
+        <item
+            android:id="@+id/postresFragment"
+            android:title="Postres"
+            android:icon="@android:drawable/ic_menu_day"
+            />
+
+
+    </group>
+
+</menu>

@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.appbar.MaterialToolbar
 
-class FoodsFragment : Fragment() {
+class firstFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,13 +19,14 @@ class FoodsFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_foods, container, false)
 
-        val food1 =  Food("Pasta", 37, "https://www.todoparaellas.com/u/fotografias/m/2021/1/13/f608x342-14127_43850_0.jpg")
-        val food2 =  Food("Hamburguesa", 30, "https://cocinamia.com.mx/wp-content/uploads/2018/12/HAMBURGUESA-1100x500.png")
-        val food3 = Food("Tacos", 90, "https://www.gdlgo.com/wp-content/uploads/2021/07/Los-Mejores-Tacos-de-Guadalajara-.jpg")
-        val food4 = Food("Pizza", 23, "https://cdn.colombia.com/gastronomia/2011/08/25/pizza-margarita-3684.webp")
 
-        val foodsLikes = arrayListOf<Food>(food1, food2, food3, food4)
-        
+        val food1 =  Food("Pastel de chocolate", 20, "https://cdn.buenavibra.es/wp-content/uploads/2020/01/16191515/Webp.net-resizeimage-68-1170x600.jpg")
+        val food2 =  Food("Tarta de manzana", 30, "https://www.splenda.com/wp-content/uploads/2020/08/perfect-homemade-apple-pie-1-1536x768.jpg")
+        val food3 = Food("Pay de limón", 9, "https://cocinamia.com.mx/wp-content/uploads/2020/02/a-02-1100x500.png")
+
+
+        val foodsLikes = arrayListOf<Food>(food1, food2, food3)
+
         // BubleSort implementation
         bubbleSort(foodsLikes)
 
@@ -35,4 +37,5 @@ class FoodsFragment : Fragment() {
 
         return view
     }
+
 }

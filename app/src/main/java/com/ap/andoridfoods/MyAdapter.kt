@@ -44,8 +44,6 @@ class MyAdapter (private val context: Context, private val arrayList: ArrayList<
         name.text = arrayList[position].name
         numberLikes.text = arrayList[position].numberLikes.toString()
 
-
-
         return convertView
     }
 }

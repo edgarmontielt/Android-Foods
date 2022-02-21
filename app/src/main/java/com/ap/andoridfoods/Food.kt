@@ -1,8 +1,6 @@
 package com.ap.andoridfoods
 
-data class Food (var name: String, var numberLikes: Int, var imgUrl: String) {
-
-}
+data class Food (var name: String, var numberLikes: Int, var imgUrl: String) { }
 
 fun bubbleSort(list:ArrayList<Food>){
     for (i in 0 until (list.size - 1 )) {
@@ -48,27 +46,4 @@ fun bubbleSort(list:ArrayList<Food>){
 
      foodsLikes.forEach { print("$it ") }
 
-}
-
-
-
-
-/* @JvmName("getName1")
-fun getName(): String{
-    return name;
-}
-
-@JvmName("setName1")
-fun setName(name: String){
-    this.name = name
-}
-
-@JvmName("getName")
-fun getName(numberLikes: Int){
-    this.numberLikes = numberLikes
-}
-
-@JvmName("setNumberOfLikes")
-fun setNumberOfLikes(numberLikes: Int) {
-    this.numberLikes = numberLikes
 } */
